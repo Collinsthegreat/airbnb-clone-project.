@@ -73,6 +73,26 @@ Celery: For handling asynchronous tasks such as sending notifications or process
 - A **User** can write multiple **Reviews** for different **Properties** (one-to-many).  
 - Each **Booking** has one associated **Payment** (one-to-one).
 
+ ## Feature Breakdown
+
+### 1. User Management
+This feature allows users to register, log in, and manage their profile securely. It ensures that user data is protected and forms the foundation for personalized interactions throughout the platform.
+
+### 2. Property Management
+Property owners can create, update, and manage listings with details like location, pricing, and availability. This feature enables the core functionality of hosting within the platform.
+
+### 3. Booking System
+Users can browse properties and make reservations by selecting available dates. This system ensures accurate availability tracking and handles the booking lifecycle from request to confirmation.
+
+### 4. Payment Processing
+Secure online payments are handled through integrated services. This feature enables users to pay for bookings and ensures transaction tracking and confirmation.
+
+### 5. Review System
+After a stay, users can rate and review properties. This promotes trust and transparency between users and property owners, improving the overall user experience.
+
+### 6. Data Optimization
+The system uses indexing and caching to enhance database performance. This ensures that users experience fast load times and efficient access to information. 
+
 ## Features Overview
 1. API Documentation
 OpenAPI Standard: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
