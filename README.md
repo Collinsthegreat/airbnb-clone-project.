@@ -139,6 +139,29 @@ All communications between the client and server will be encrypted using HTTPS. 
 ### Why Security is Crucial for Key Areas
 
 **User Data**: Personal information like emails, passwords, and phone numbers must be secured to protect user privacy and comply with data protection regulations.
+
+## CI/CD Pipeline
+
+### What is CI/CD?
+
+CI/CD stands for **Continuous Integration and Continuous Deployment**. It is a development practice that automates the process of testing, building, and deploying code. In this project, CI/CD ensures that changes made to the codebase are automatically tested and deployed in a reliable and efficient manner.
+
+### Why CI/CD is Important
+
+Implementing a CI/CD pipeline:
+- **Speeds up development** by catching bugs early and reducing manual deployment steps.
+- **Improves code quality** through automated testing and integration checks.
+- **Ensures consistency** across environments by using containers and automation scripts.
+- **Enables faster releases** and more agile iterations of new features or fixes.
+
+### Tools Used for CI/CD
+
+- **GitHub Actions**: Automates workflows such as running tests, linting code, and deploying applications when changes are pushed to the repository.
+- **Docker**: Containers ensure the application runs consistently across development, staging, and production environments.
+- **Heroku / AWS / Vercel**: Potential platforms for automated deployment of the backend and frontend applications.
+- **PostgreSQL / Redis**: Used alongside CI/CD tools for integration testing with actual data services.
+
+
 **Payments**: Financial transactions must be processed securely to prevent fraud, theft, and loss of trust.
 **Booking System**: Unauthorized access to booking data can disrupt business logic and lead to misuse of resources.
 **Property Listings**: Only authorized users should be able to create or modify listings to maintain platform integrity and prevent abuse.
