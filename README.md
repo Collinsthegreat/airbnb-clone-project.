@@ -116,3 +116,31 @@ Features: Post and manage reviews for properties.
 7. Database Optimizations
 Indexing: Implement indexes for fast retrieval of frequently accessed data.
 Caching: Use caching strategies to reduce database load and improve performance.
+
+## API Security
+
+Securing the backend APIs is essential to protect sensitive data, ensure application integrity, and maintain user trust. The following security measures will be implemented across the application:
+
+### Authentication
+All users must authenticate using secure methods such as token-based authentication (e.g., JWT). This ensures that only verified users can access protected resources and perform authorized actions.
+
+### Authorization
+Role-based access control (RBAC) will be enforced to ensure that users can only perform actions permitted by their role (e.g., host vs. guest). This prevents unauthorized access to critical operations such as editing property listings or viewing booking histories.
+
+### Rate Limiting
+To protect against abuse and brute-force attacks, rate limiting will be applied to restrict the number of requests a user or IP address can make within a specified timeframe. This reduces the risk of denial-of-service (DoS) attacks and conserves system resources.
+
+### Input Validation and Sanitization
+All incoming data will be validated and sanitized to prevent injection attacks such as SQL injection and cross-site scripting (XSS). This ensures the integrity of the application and protects backend systems from malicious input.
+
+### HTTPS Enforcement
+All communications between the client and server will be encrypted using HTTPS. This protects user credentials, payment details, and other sensitive data from being intercepted during transmission.
+
+### Why Security is Crucial for Key Areas
+
+**User Data**: Personal information like emails, passwords, and phone numbers must be secured to protect user privacy and comply with data protection regulations.
+**Payments**: Financial transactions must be processed securely to prevent fraud, theft, and loss of trust.
+**Booking System**: Unauthorized access to booking data can disrupt business logic and lead to misuse of resources.
+**Property Listings**: Only authorized users should be able to create or modify listings to maintain platform integrity and prevent abuse.
+
+
