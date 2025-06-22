@@ -25,6 +25,54 @@ PostgreSQL: A powerful relational database used for data storage.
 GraphQL: Allows for flexible and efficient querying of data.
 Celery: For handling asynchronous tasks such as sending notifications or processing payments.
 
+## Database Design
+
+### Key Entities and Fields
+
+#### Users
+- **user_id** (Primary Key)  
+- **name**  
+- **email**  
+- **password_hash**  
+- **phone_number**
+
+#### Properties
+- **property_id** (Primary Key)  
+- **owner_id** (Foreign Key referencing Users.user_id)  
+- **title**  
+- **description**  
+- **location**  
+- **price_per_night**
+
+#### Bookings
+- **booking_id** (Primary Key)  
+- **user_id** (Foreign Key referencing Users.user_id)  
+- **property_id** (Foreign Key referencing Properties.property_id)  
+- **start_date**  
+- **end_date**  
+- **total_price**
+
+#### Reviews
+- **review_id** (Primary Key)  
+- **user_id** (Foreign Key referencing Users.user_id)  
+- **property_id** (Foreign Key referencing Properties.property_id)  
+- **rating**  
+- **comment**
+
+#### Payments
+- **payment_id** (Primary Key)  
+- **booking_id** (Foreign Key referencing Bookings.booking_id)  
+- **payment_date**  
+- **amount**  
+- **payment_status**
+
+### Entity Relationships
+
+- A **User** can own multiple **Properties** (one-to-many).  
+- A **Booking** belongs to one **User** and one **Property** (many-to-one).  
+- A **User** can write multiple **Reviews** for different **Properties** (one-to-many).  
+- Each **Booking** has one associated **Payment** (one-to-one).
+
 ## Features Overview
 1. API Documentation
 OpenAPI Standard: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
